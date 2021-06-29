@@ -1,8 +1,15 @@
-import logo from './logo.svg';
+import LoginPage from './LoginPage';
+import MainPage from './MainPage';
+import GpaScore from './gpaScore';
 import './App.css';
-
-function App() {
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+export default function App() {
   return (
+    /** 
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -19,7 +26,23 @@ function App() {
         </a>
       </header>
     </div>
+    */
+   <>
+   <Router>
+    
+     <Switch>
+       <Route path = "/mainpage">
+           <MainPage/>
+       </Route>
+       <Route path = "/gpaScore">
+         <GpaScore/>
+       </Route>
+       <Route path = "/">
+         <LoginPage/>
+       </Route>
+     </Switch>
+   </Router>
+   </>
   );
 }
 
-export default App;
