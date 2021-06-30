@@ -37,7 +37,7 @@ export default function App() {
        <Route path = "/gpaScore">
          <GpaScore/>
        </Route>
-       <Route path = "/">
+       <Route path =  "/">
          <LoginPage/>
        </Route>
      </Switch>
